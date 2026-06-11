@@ -31,37 +31,37 @@ export const team = [
     name: "A. Bulanza",
     role: "Associé fondateur — Contentieux",
     size: "lg",
-    photo: "/images/team/bulanza.svg",
+    photo: "/images/team/bulanza.jpg",
   },
   {
     name: "M. Keita",
     role: "Associée — M&A",
     size: "md",
-    photo: "/images/team/keita.svg",
+    photo: "/images/team/keita.jpg",
   },
   {
     name: "J. Verstraeten",
     role: "Associé — Arbitrage",
     size: "sm",
-    photo: "/images/team/verstraeten.svg",
+    photo: "/images/team/verstraeten.jpg",
   },
   {
     name: "C. Lambert",
     role: "Of Counsel — Droit social",
     size: "sm",
-    photo: "/images/team/lambert.svg",
+    photo: "/images/team/lambert.jpg",
   },
   {
     name: "S. N'Diaye",
     role: "Counsel — Conformité",
     size: "md",
-    photo: "/images/team/ndiaye.svg",
+    photo: "/images/team/ndiaye.jpg",
   },
   {
     name: "É. Morel",
     role: "Associée — Gouvernance",
     size: "lg",
-    photo: "/images/team/morel.svg",
+    photo: "/images/team/morel.jpg",
   },
 ];
 
