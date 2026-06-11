@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { team } from "@/lib/data";
 import styles from "./Equipe.module.css";
 
@@ -18,7 +19,14 @@ export default function Equipe() {
               }`}
             >
               <div className={styles.portrait}>
-                <span>{m.hint}</span>
+                <Image
+                  src={m.photo}
+                  alt={`Portrait de ${m.name}`}
+                  fill
+                  sizes="(max-width: 860px) 50vw, 33vw"
+                  style={{ objectFit: "cover", objectPosition: "top center" }}
+                  priority={m.size === "lg"}
+                />
               </div>
               <h3 className={styles.name}>{m.name}</h3>
               <p className={styles.role}>{m.role}</p>

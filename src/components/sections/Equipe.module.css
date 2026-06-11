@@ -57,13 +57,11 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  background: repeating-linear-gradient(45deg, #2A2A2A 0 14px, #242424 14px 28px);
+  background: #1C1C1C;
   outline: 1px solid #3a3a3a;
-  display: grid;
-  place-items: center;
-  filter: grayscale(1) contrast(1.05);
-  transition: filter 0.5s;
   overflow: hidden;
+  filter: grayscale(1) contrast(1.08);
+  transition: filter 0.5s;
 }
 
 .member:hover .portrait {

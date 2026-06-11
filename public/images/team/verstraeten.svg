@@ -1,0 +1,57 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="frame-c"><rect width="400" height="500"/></clipPath>
+    <radialGradient id="vign-c" cx="45%" cy="50%" r="72%">
+      <stop offset="55%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.75)"/>
+    </radialGradient>
+    <linearGradient id="skin-c" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D8D4CC"/>
+      <stop offset="100%" stop-color="#C4C0B8"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#frame-c)">
+    <rect width="400" height="500" fill="#1C1C1C"/>
+    <!-- lignes béton verticales -->
+    <line x1="133" y1="0" x2="133" y2="500" stroke="#242424" stroke-width="1"/>
+    <line x1="266" y1="0" x2="266" y2="500" stroke="#242424" stroke-width="1"/>
+    <line x1="0" y1="167" x2="400" y2="167" stroke="#222" stroke-width="1"/>
+    <line x1="0" y1="333" x2="400" y2="333" stroke="#222" stroke-width="1"/>
+    <!-- veste + épaules (légèrement de 3/4) -->
+    <path d="M30 500 L30 405 Q65 345 128 320 L138 285 L200 305 L262 285 L272 320 Q335 345 370 405 L370 500 Z" fill="#1E1E1E"/>
+    <!-- revers de veste -->
+    <path d="M160 300 L200 330 L200 500" stroke="#2A2A2A" stroke-width="1" fill="none"/>
+    <path d="M240 300 L200 330" stroke="#2A2A2A" stroke-width="1" fill="none"/>
+    <!-- chemise claire -->
+    <path d="M163 298 L200 330 L237 298 L225 278 L200 292 L175 278 Z" fill="#C8C4BC"/>
+    <!-- cou -->
+    <path d="M183 270 Q200 260 217 270 L220 295 Q200 302 180 295 Z" fill="url(#skin-c)"/>
+    <!-- tête -->
+    <ellipse cx="200" cy="182" rx="74" ry="80" fill="url(#skin-c)"/>
+    <!-- cheveux gris/poivre-sel très courts -->
+    <path d="M126 170 Q128 102 200 100 Q272 102 274 170 Q265 128 200 126 Q135 128 126 170 Z" fill="#3A3A3A"/>
+    <!-- tempes grises -->
+    <path d="M126 170 Q122 185 128 198" stroke="#4A4A4A" stroke-width="4" fill="none"/>
+    <path d="M274 170 Q278 185 272 198" stroke="#4A4A4A" stroke-width="4" fill="none"/>
+    <!-- oreilles -->
+    <ellipse cx="127" cy="192" rx="9" ry="14" fill="#BCBAB2"/>
+    <ellipse cx="273" cy="192" rx="9" ry="14" fill="#BCBAB2"/>
+    <!-- sourcils marqués -->
+    <path d="M168 168 Q178 164 192 168" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M208 168 Q222 164 232 168" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- yeux -->
+    <ellipse cx="180" cy="186" rx="12" ry="6" fill="#141414"/>
+    <ellipse cx="220" cy="186" rx="12" ry="6" fill="#141414"/>
+    <ellipse cx="184" cy="184" rx="3" ry="2.5" fill="#444"/>
+    <ellipse cx="224" cy="184" rx="3" ry="2.5" fill="#444"/>
+    <!-- nez -->
+    <path d="M196 198 Q190 218 184 228 Q200 235 216 228 Q210 218 204 198 Z" fill="#B8B4AC"/>
+    <!-- rides légères front -->
+    <path d="M155 152 Q200 148 245 152" stroke="#B0ACA4" stroke-width="0.8" fill="none" opacity="0.4"/>
+    <path d="M162 142 Q200 138 238 142" stroke="#B0ACA4" stroke-width="0.6" fill="none" opacity="0.3"/>
+    <!-- bouche fermée, déterminée -->
+    <path d="M182 246 L218 246" stroke="#1C1C1C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- vignettage -->
+    <rect width="400" height="500" fill="url(#vign-c)"/>
+  </g>
+</svg>

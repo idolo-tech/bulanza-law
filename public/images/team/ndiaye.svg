@@ -1,0 +1,58 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="frame-e"><rect width="400" height="500"/></clipPath>
+    <radialGradient id="vign-e" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.72)"/>
+    </radialGradient>
+    <linearGradient id="skin-e" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A8A49C"/>
+      <stop offset="100%" stop-color="#989490"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#frame-e)">
+    <rect width="400" height="500" fill="#181818"/>
+    <line x1="80" y1="0" x2="80" y2="500" stroke="#202020" stroke-width="1"/>
+    <line x1="160" y1="0" x2="160" y2="500" stroke="#1E1E1E" stroke-width="1"/>
+    <line x1="240" y1="0" x2="240" y2="500" stroke="#1E1E1E" stroke-width="1"/>
+    <line x1="320" y1="0" x2="320" y2="500" stroke="#202020" stroke-width="1"/>
+    <!-- fond clair derrière silhouette -->
+    <ellipse cx="200" cy="320" rx="185" ry="240" fill="#222" opacity="0.5"/>
+    <!-- épaules veste sombre -->
+    <path d="M35 500 L35 408 Q68 348 126 324 L136 294 Q166 278 200 276 Q234 278 264 294 L274 324 Q332 348 365 408 L365 500 Z" fill="#1A1A1A"/>
+    <!-- chemise col roulé ou simple -->
+    <path d="M175 290 L200 308 L225 290 L218 270 Q200 280 200 280 Q200 280 182 270 Z" fill="#2A2A2A"/>
+    <!-- cou -->
+    <path d="M182 264 Q200 256 218 264 L220 288 Q200 296 180 288 Z" fill="url(#skin-e)"/>
+    <!-- tête haut contraste -->
+    <ellipse cx="200" cy="182" rx="72" ry="80" fill="url(#skin-e)"/>
+    <!-- cheveux naturels/afro structuré -->
+    <path d="M128 172 Q126 85 200 78 Q274 85 272 172" fill="#161616"/>
+    <ellipse cx="200" cy="118" rx="76" ry="52" fill="#161616"/>
+    <ellipse cx="200" cy="80" rx="62" ry="32" fill="#1A1A1A"/>
+    <!-- volume cheveux côtés -->
+    <ellipse cx="134" cy="172" rx="24" ry="35" fill="#181818"/>
+    <ellipse cx="266" cy="172" rx="24" ry="35" fill="#181818"/>
+    <!-- oreilles -->
+    <ellipse cx="132" cy="194" rx="9" ry="13" fill="#8E8A84"/>
+    <ellipse cx="268" cy="194" rx="9" ry="13" fill="#8E8A84"/>
+    <!-- boucles créoles -->
+    <circle cx="132" cy="206" r="6" fill="none" stroke="#666" stroke-width="2"/>
+    <circle cx="268" cy="206" r="6" fill="none" stroke="#666" stroke-width="2"/>
+    <!-- sourcils bien définis -->
+    <path d="M167 168 Q178 163 193 167" stroke="#141414" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M207 167 Q222 163 233 168" stroke="#141414" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- yeux -->
+    <ellipse cx="180" cy="187" rx="12" ry="6" fill="#0E0E0E"/>
+    <ellipse cx="220" cy="187" rx="12" ry="6" fill="#0E0E0E"/>
+    <ellipse cx="185" cy="185" rx="3" ry="2.5" fill="#333"/>
+    <ellipse cx="225" cy="185" rx="3" ry="2.5" fill="#333"/>
+    <!-- nez -->
+    <path d="M193 200 Q186 222 178 230 Q200 237 222 230 Q214 222 207 200 Z" fill="#8A8880"/>
+    <!-- bouche généreuse -->
+    <path d="M181 248 Q200 258 219 248" stroke="#181818" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M184 249 Q200 255 216 249" stroke="#A0A09A" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <!-- vignettage -->
+    <rect width="400" height="500" fill="url(#vign-e)"/>
+  </g>
+</svg>

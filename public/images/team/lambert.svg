@@ -1,0 +1,51 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="frame-d"><rect width="400" height="500"/></clipPath>
+    <radialGradient id="vign-d" cx="52%" cy="48%" r="68%">
+      <stop offset="55%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.7)"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#frame-d)">
+    <rect width="400" height="500" fill="#141414"/>
+    <!-- texture diagonale -->
+    <line x1="-50" y1="150" x2="450" y2="150" stroke="#1E1E1E" stroke-width="1"/>
+    <line x1="-50" y1="300" x2="450" y2="300" stroke="#1E1E1E" stroke-width="1"/>
+    <line x1="-50" y1="450" x2="450" y2="450" stroke="#1E1E1E" stroke-width="1"/>
+    <!-- veste sombre, col ouvert -->
+    <path d="M25 500 L25 410 Q55 350 118 326 L128 296 Q163 278 200 276 Q237 278 272 296 L282 326 Q345 350 375 410 L375 500 Z" fill="#202020"/>
+    <!-- chemise légère dessous -->
+    <path d="M162 296 L200 334 L238 296 L255 272 L200 290 L145 272 Z" fill="#B8B4AC"/>
+    <!-- bijou/collier -->
+    <path d="M184 320 Q200 326 216 320" stroke="#888480" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- cou fin -->
+    <path d="M184 268 Q200 260 216 268 L218 292 Q200 299 182 292 Z" fill="#CCCAC2"/>
+    <!-- tête -->
+    <ellipse cx="200" cy="182" rx="68" ry="78" fill="#CCCAC2"/>
+    <!-- cheveux mi-longs chignon -->
+    <path d="M132 170 Q130 92 200 90 Q270 92 268 170 Q272 215 276 290 Q258 258 256 228 Q242 195 218 186 L200 182 L182 186 Q158 195 144 228 Q142 258 124 290 Q128 215 132 170 Z" fill="#888070"/>
+    <!-- chignon haut -->
+    <ellipse cx="200" cy="95" rx="28" ry="22" fill="#888070"/>
+    <path d="M172 90 Q200 78 228 90 Q214 100 200 102 Q186 100 172 90 Z" fill="#767060"/>
+    <!-- oreilles -->
+    <ellipse cx="133" cy="188" rx="9" ry="13" fill="#C0BEB6"/>
+    <ellipse cx="267" cy="188" rx="9" ry="13" fill="#C0BEB6"/>
+    <!-- boucles d'oreilles simples -->
+    <circle cx="133" cy="200" r="4" fill="#7A7570" opacity="0.8"/>
+    <circle cx="267" cy="200" r="4" fill="#7A7570" opacity="0.8"/>
+    <!-- sourcils fins arqués -->
+    <path d="M168 164 Q180 160 193 164" stroke="#5A5550" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M207 164 Q220 160 232 164" stroke="#5A5550" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- yeux -->
+    <ellipse cx="180" cy="183" rx="11" ry="5.5" fill="#101010"/>
+    <ellipse cx="220" cy="183" rx="11" ry="5.5" fill="#101010"/>
+    <ellipse cx="184" cy="181" rx="2.5" ry="2" fill="#3A3A3A"/>
+    <ellipse cx="224" cy="181" rx="2.5" ry="2" fill="#3A3A3A"/>
+    <!-- nez -->
+    <path d="M197 196 Q192 214 186 220 Q200 226 214 220 Q208 214 203 196 Z" fill="#B8B5AD"/>
+    <!-- bouche -->
+    <path d="M183 244 Q200 252 217 244" stroke="#181818" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <!-- vignettage -->
+    <rect width="400" height="500" fill="url(#vign-d)"/>
+  </g>
+</svg>
