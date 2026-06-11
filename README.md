@@ -24,3 +24,4 @@ The design medium is **HTML/CSS/JS** — these are prototypes, not production co
 - `chats/` — conversation transcripts (read these!)
 - `project/` — the `bulanza` project files (HTML prototypes, assets, components)
 # bulanza-law
+is coding in nextjs
