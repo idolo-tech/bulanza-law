@@ -1,0 +1,109 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--u) * 3) var(--margin);
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.logo {
+  font-family: var(--font-space-grotesk), var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  user-select: none;
+  position: relative;
+}
+
+.burger {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 6px 0;
+}
+
+.burger span {
+  display: block;
+  width: 34px;
+  height: 3px;
+  background: #fff;
+  transition: transform 0.35s, opacity 0.35s;
+}
+
+.line1 { transform: none; }
+.line2 { opacity: 1; }
+.line3 { transform: none; }
+
+.line1Open { transform: translateY(10px) rotate(45deg); }
+.line2Open { opacity: 0; }
+.line3Open { transform: translateY(-10px) rotate(-45deg); }
+
+/* fullscreen menu */
+.menu {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-dark);
+  color: var(--ink-on-dark);
+  z-index: 800;
+  display: grid;
+  place-items: center;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.menuOpen {
+  clip-path: inset(0 0 0 0);
+}
+
+.menuList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--u) * 2);
+}
+
+.menuLink {
+  display: flex;
+  align-items: baseline;
+  gap: calc(var(--u) * 4);
+  font-family: var(--font-space-grotesk), var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  transform: translateX(0);
+  transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1), color 0.3s;
+}
+
+.menuLink:hover {
+  transform: translateX(20px);
+  color: var(--accent-on-dark);
+}
+
+.menuNum {
+  font-family: var(--font-ibm-plex-mono), var(--font-mono);
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--accent-on-dark);
+  letter-spacing: 0;
+}
+
+.menuFoot {
+  position: absolute;
+  bottom: calc(var(--u) * 4);
+  left: var(--margin);
+  right: var(--margin);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-ibm-plex-mono), var(--font-mono);
+  font-size: 0.7rem;
+  color: #6B6760;
+}

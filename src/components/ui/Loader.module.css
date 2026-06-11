@@ -1,0 +1,40 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 9500;
+  display: grid;
+  place-items: center;
+  transition: opacity 0.5s ease 0.15s;
+  pointer-events: all;
+}
+
+.done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.stamp {
+  font-family: var(--font-space-grotesk), var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  transform: scale(1.6);
+  opacity: 0;
+  filter: blur(6px);
+  animation: stampIn 0.55s cubic-bezier(0.2, 0.9, 0.3, 1) 0.1s forwards;
+}
+
+@keyframes stampIn {
+  60% {
+    transform: scale(0.97);
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}

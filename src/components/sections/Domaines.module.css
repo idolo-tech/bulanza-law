@@ -1,0 +1,104 @@
+.section {
+  padding: calc(var(--u) * 16) var(--margin);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.secHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: calc(var(--u) * 4);
+  margin-bottom: calc(var(--u) * 8);
+}
+
+.h2 {
+  font-family: var(--font-space-grotesk), var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.art {
+  font-family: var(--font-ibm-plex-mono), var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.list {
+  border-top: 2px solid var(--rule);
+  list-style: none;
+}
+
+.domaine {
+  position: relative;
+  display: grid;
+  grid-template-columns: 80px 1fr minmax(0, 380px);
+  align-items: center;
+  gap: calc(var(--u) * 4);
+  padding: calc(var(--u) * 5) 0;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.25);
+}
+
+.domaine::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  width: 100%;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.domaine:hover::after {
+  transform: scaleX(1);
+}
+
+.num {
+  font-family: var(--font-ibm-plex-mono), var(--font-mono);
+  font-size: 1rem;
+  color: var(--accent);
+  transition: color 0.35s;
+}
+
+.domaine:hover .num {
+  color: var(--ink);
+}
+
+.h3 {
+  font-family: var(--font-space-grotesk), var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4.2vw, 4rem);
+  letter-spacing: 0.02em;
+  line-height: 1.02;
+  text-transform: uppercase;
+}
+
+.note {
+  font-family: var(--font-source-serif), var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  opacity: 0;
+  transform: translateX(12px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.domaine:hover .note {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 860px) {
+  .domaine {
+    grid-template-columns: 48px 1fr;
+  }
+  .note {
+    display: none;
+  }
+}

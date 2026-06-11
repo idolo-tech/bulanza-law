@@ -1,0 +1,120 @@
+.wrap {
+  background: var(--bg-dark);
+  color: var(--ink-on-dark);
+}
+
+.section {
+  padding: calc(var(--u) * 16) var(--margin);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.secHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: calc(var(--u) * 4);
+  margin-bottom: calc(var(--u) * 8);
+}
+
+.h2 {
+  font-family: var(--font-space-grotesk), var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-on-dark);
+}
+
+.art {
+  font-family: var(--font-ibm-plex-mono), var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-on-dark);
+  white-space: nowrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: calc(var(--u) * 4) calc(var(--u) * 3);
+  align-items: end;
+}
+
+.member {
+  grid-column: span 2;
+}
+
+.lg {
+  grid-column: span 3;
+}
+
+.sm {
+  grid-column: span 2;
+  padding-top: calc(var(--u) * 8);
+}
+
+.portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: repeating-linear-gradient(45deg, #2A2A2A 0 14px, #242424 14px 28px);
+  outline: 1px solid #3a3a3a;
+  display: grid;
+  place-items: center;
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.5s;
+  overflow: hidden;
+}
+
+.member:hover .portrait {
+  filter: grayscale(1) sepia(0.28) contrast(1.05);
+}
+
+.portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+.member:hover .portrait::after {
+  opacity: 0.18;
+}
+
+.portrait span {
+  font-family: var(--font-ibm-plex-mono), var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: #777;
+  text-align: center;
+  padding: 0 12px;
+  white-space: pre-line;
+}
+
+.name {
+  margin-top: calc(var(--u) * 2);
+  font-family: var(--font-space-grotesk), var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
+}
+
+.role {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #9b968d;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .member,
+  .lg,
+  .sm {
+    grid-column: span 1;
+    padding-top: 0;
+  }
+}
