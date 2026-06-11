@@ -10,7 +10,7 @@
 .bg {
   position: absolute;
   inset: -6%;
-  background-image: url("/images/hero-bg.svg");
+  background-image: url("/images/hero-bg.jpg");
   background-size: cover;
   background-position: center 20%;
   transform: scale(1);
